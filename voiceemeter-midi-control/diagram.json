@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": -71.68, "left": 51.85, "attrs": {} },
+    { "type": "wokwi-lcd1602", "id": "lcd1", "top": 148.64, "left": 56.27, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": 31.95, "left": -87.15, "attrs": {} },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": -34.99,
+      "left": -87.1,
+      "attrs": { "color": "green" }
+    }
+  ],
+  "connections": [
+    [ "uno:12", "lcd1:RS", "#8f4814", [ "v-25.22", "h-161.17", "v406.41", "h91.59" ] ],
+    [ "lcd1:E", "uno:13", "green", [ "v27.76", "h-126.94", "v-387.84", "h167.52" ] ],
+    [ "uno:2", "lcd1:D4", "red", [ "v-15.31", "h88.46", "v423.75", "h-192.54" ] ],
+    [ "uno:3", "lcd1:D5", "orange", [ "v-25.22", "h113.65", "v422.09", "h-198.73" ] ],
+    [ "uno:4", "lcd1:D6", "gold", [ "v-39.27", "h142.15", "v424.63", "h-208.23" ] ],
+    [ "lcd1:D7", "uno:5", "green", [ "v28.15", "h213.6", "v-427.19", "h-166.52" ] ],
+    [ "lcd1:VSS", "uno:GND.2", "black", [ "v11.4", "h-41.3", "v-150.06", "h174.38" ] ],
+    [ "lcd1:VDD", "uno:5V", "red", [ "v19.26", "h-63.37", "v-164.96", "h177.45" ] ],
+    [ "pot1:GND", "uno:GND.2", "black", [ "v40.53", "h279.5" ] ],
+    [ "pot1:VCC", "uno:5V", "red", [ "v33.46", "h250" ] ],
+    [ "pot1:SIG", "uno:A2", "violet", [ "v37.39", "h327" ] ],
+    [ "btn1:1.l", "uno:GND.3", "green", [ "h0" ] ],
+    [ "btn1:1.r", "uno:9", "green", [ "v0" ] ],
+    [ "btn1:2.l", "uno:5V", "green", [ "h0" ] ],
+    [ "uno:9", "uno:8", "green", [ "v0" ] ]
+  ]
+}
